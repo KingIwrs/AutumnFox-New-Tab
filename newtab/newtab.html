@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+        <title>New Tab</title>
+        <link rel="icon" href="/assets/favicon.ico"/>
+        <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/newtab/style.css">
+        <script type="text/javascript" src="/newtab/js/focus.js" defer></script>
+        <script type="text/javascript" src="/js/defaults.js" defer></script>
+        <script type="text/javascript" src="/newtab/js/set_personalizations.js" defer></script>
+        <script type="text/javascript" src="/newtab/js/dropdown.js" defer></script>
+        <script type="text/javascript" src="/newtab/js/search.js" defer></script>
+    </head>
+
+    <body>
+        <div class="wrapper-main">
+            <div class="center">
+            <div class="wrapper-logo">
+                <img id="logo" class="logo" alt="Fox in the night of autumn">
+                <h1 id="name" class="name"> </h1>
+            </div>
+            <div class="wrapper-search_bar">
+                <input id="input" class="input" type="search" placeholder="Search with StartPage" tabindex="1" autofocus>
+                <button id="clear_search" class="clear_search" tabindex="2">X</button>
+                <button id="search_button" class="search_button" tabindex="4">O</button>
+            </div>
+            <div id="wrapper-dropdown_menu" class="wrapper-dropdown_menu">
+                <select id="select-dropdown_menu" class="select-dropdown_menu" tabindex="3">
+                    
+                </select>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>

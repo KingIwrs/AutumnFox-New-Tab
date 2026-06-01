@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="icon" href="/assets/favicon.ico" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/settings/css/main.css">
+    <link rel="stylesheet" href="/settings/css/personalize.css">
+    <link rel="stylesheet" href="/settings/css/import_export.css">
+    <script type="text/javascript" src="/js/defaults.js" defer></script>
+    <script type="text/javascript" src="/settings/js/set_personalizations.js" defer></script>
+    <script type="text/javascript" src="/settings/js/load_settings.js" defer></script>
+    <script type="text/javascript" src="/settings/js/switch_tabs.js" defer></script>
+    <script type="text/javascript" src="/settings/js/starting_page.js" defer></script>
+    <script type="text/javascript" src="/settings/js/color_picker.js" defer></script>
+    <script type="text/javascript" src="/settings/js/save_changes.js" defer></script>
+    <script type="text/javascript" src="/settings/js/restore_default_personalizations.js" defer></script>
+    <script type="text/javascript" src="/settings/js/restore_defaults.js" defer></script>
+    <script type="text/javascript" src="/settings/js/export.js" defer></script>
+    <script type="text/javascript" src="/settings/js/import.js" defer></script>
+    <script type="text/javascript" src="/settings/js/cancel.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper-main">
+        <div class="wrappper-aligner">
+            <div class="wrapper-logo">
+                <img id="logo" class="logo" alt="The logo. by default, it's a fox in the night of autumn.">
+                <h1 id="name" class="name"> </h1>
+            </div>
+            <div class="wrapper-tabs">
+                <button id="tab-personalize" class="tabs">Personalize</button>
+                <button id="tab-import_export" class="tabs">Import/Export</button>
+            </div>
+            <div id="personalize" class="tab_page_box personalize">
+                <button id="restore_logo_name" class="restore_logo_name">Restore Defualts</button>
+                <div class="wrapper-image_input">
+                    <div class="wrapper-input_img">
+                        <label for="input-image" class="inp_img_label">Select File</label>
+                        <input id="input-image" class="input-image" type="file" accept="image/*">
+                    </div>
+                    <img id="logo_display" class="logo_display">
+                </div>
+                <input id="edit_name" class="edit_name" type="text">
+                <div class="wrapper-color_inputs">
+                    <label for="color_text" class="color_text-label">Background color:</label>
+                    <input id="color_text" class="color_text" type="text" placeholder="#007bc2" tabindex="2">
+                    <input id="color_picker" class="color_picker" type="color">
+                </div>
+                <div>
+                    <button id="btn-save" class="btn-save">Save</button>
+                </div>
+            </div>
+            <div id="import_export" class="tab_page_box import_export">
+                <div id="wrapper-restore" class="wrapper-restore">
+                    <button id="restore_defaults" class="restore_defaults">Restore Defaults</button>
+                </div>
+                <div id="wrapper-preview" class="wrapper-preview">
+                    <img id="preview-logo" class="preview-logo">
+                    <h1 id="preview-name" class="preview-name"> </h1>
+                    <div>
+                        <label class="preview-bg-color" style='color: #ffff00'>Background Color: </label>
+                        <label id="preview-bg-color" class="preview-bg-color"> </label>
+                    </div>
+                    <button id="cancel-btn" class="cancel-btn">Cancel</button>
+                    <button id="save-btn" class="save-btn">Save</button>
+                    <div id="wrapper-search_engines" class="wrapper-search_engines">
+                    </div>
+                </div>
+                <div class="imp-exp-buttons">
+                    <label for="import-file_picker" class="imp-fi_pi-label">Import</label>
+                    <input id="import-file_picker" class="import-file_picker" type="file" accept=".afnt">
+                    <a href="" id="export-btn" download="backup<CURRENT_DATE_TIME>.afnt"><button
+                            class="export-button">Export</button></a>
+                </div>
+                <label id="store_SE_data" style="display: none;"></>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

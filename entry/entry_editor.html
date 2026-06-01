@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+        <title id="title">Edit Entry</title>
+        <link rel="icon" href="/assets/favicon.ico"/>
+        <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/entry/entry.css">
+        <script type="text/javascript" src="/js/defaults.js" defer></script>
+        <script type="text/javascript" src="/entry/js/set_personalizations.js" defer></script>
+        <script type="text/javascript" src="/entry/js/entry_editor.js" defer></script>
+    </head>
+
+    <body>
+        <div class="wrapper-main">
+            <div id="wrapper-aligner" class="wrapper-aligner">
+                <div class="wrapper-logo">
+                    <img id="logo" class="logo" alt="Fox in the night of autumn">
+                    <h1 id="name" class="name"> </h1>
+                </div>
+                <div class="wrapper-inputs">
+                    <div>
+                        <label for="name_text">Name:</label>
+                    </div>
+                    <input id="name_text" class="name_text" type="text" placeholder="ExampleSE" tabindex="1">
+                    <div>
+                        <label for="color_text">Color:</label>
+                    </div>
+                    <div class="wrapper-color_inputs">
+                        <input id="color_text" class="color_text" type="text" placeholder="#007bc2" tabindex="2">
+                        <input id="color_picker" class="color_picker" type="color">
+                    </div>
+                    <div>
+                        <label for="link_text">Link:</label>
+                    </div>
+                    <input id="link_text" class="link_text" type="text" placeholder="https://www.example.com/search?query=%s" tabindex="3">
+                </div>
+                <div class="wrapper-lonely_button">
+                    <button id="button-submit_entry" class="button-submit_entry" tabindex="4">save</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,114 @@
+.restore_logo_name {
+    background-color: #a70b0b;
+    float: left;
+}
+.restore_logo_name:hover {
+    background-color: #a70b0bad;
+}
+.delete_button:active {
+    background-color: #a70b0b;
+}
+
+.wrapper-image_input {
+    padding-top: 30px;
+}
+
+.wrapper-input_img {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: -10px;
+    margin-left: 100px;
+}
+
+.input-image {
+    display: none;
+}
+.inp_img_label {
+    font-size: 13px;
+    background-color: #057e41;
+    border: 5px solid #08a155;
+    border-radius: 18px;
+    padding: 5px;
+}
+.inp_img_label:hover {
+    background-color: #025735;
+    border-color: #057e41;
+}
+
+.logo_display {
+    width: 90px;
+    margin-right: 100px;
+    margin-top: -50px;
+}
+
+.edit_name {
+    border-radius: 20px;
+    width: 90vw;
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+.color_text-label {
+    color: yellow;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-left: -40px;
+    margin-right: 5px;
+    font-size: 16px;
+}
+.wrapper-color_inputs {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+.color_text {
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    width: 100px;
+}
+.color_picker {
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    height: 40px;
+    width: 37px;
+    padding: 0px;
+    border: 3px solid #202223;
+    border-left: 0px;
+}
+.color_picker:hover {
+    cursor: pointer;
+}
+.color_picker::-webkit-color-swatch-wrapper {
+    padding: 0px;
+}
+
+.btn-save {
+    margin-top: 10px;
+    font-size: 15px;
+    width: 70px;
+}
+
+@media (min-width: 600px) {
+    .wrapper-input_img {
+        margin-top: 50px;
+        margin-left: 120px;
+    }
+    .logo_display {
+        margin-right: 120px;
+        margin-bottom: 15px;
+    }
+    .edit_name {
+        width: 500px;
+    }
+    .btn-save {
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 1700px) {
+    .logo_display {
+        width: 115px;
+    }
+}

@@ -1,0 +1,134 @@
+.wrapper-restore {
+    margin-bottom: 25px;
+}
+.restore_defaults {
+    float: left;
+    background-color: #a70b0b;
+}
+.restore_defaults:hover {
+    background-color: #a70b0bad;
+}
+
+.cancel-btn {
+    float: left;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    background-color: #a70b0b;
+    display: none;
+}
+.cancel-btn:hover {
+    background-color: #a70b0bad;
+}
+
+.save-btn {
+    float: left;
+    margin-left: 5px;
+    margin-top: -20px;
+    display: none;
+}
+
+
+.import_files {
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+
+.import-file_picker {
+    display: none;
+}
+
+.imp-fi_pi-label {
+    font-size: 13px;
+    background-color: #08a155;
+    border: none;
+    border-radius: 15px;
+    padding: 4px;
+}
+.imp-fi_pi-label:hover {
+    transition: all 0.3s ease;
+    background-color: #057e41;
+}
+
+.wrapper-preview {
+    text-align: center;
+}
+
+.preview-logo {
+    width: 90px;
+}
+.preview-name {
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    margin-top: 4px;
+}
+.preview-bg-color {
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    font-size: 20px;
+}
+
+.wrapper-search_engines {
+    overflow-y: auto;
+    height: 212px;
+    width: 90vw;
+    background-color: #0D0F1C;
+    border: 2px solid #202223;
+    border-radius: 20px;
+}
+
+/* LABEL STUFF */
+.SE_div {
+    background-color: #0D0F1C;
+    border: 2px solid #202223;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.label_div {
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 6.5fr;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+.label_start {
+    color: yellow;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.imp-exp-buttons {
+    position: -webkit-sticky;
+    position: sticky;
+    margin-top: 10px;
+    background-color: transparent;
+}
+
+.import-btn {
+    margin-top: 4px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 600px) {
+    .wrapper-search_engines {
+        width: 560px;
+        height: 340px;
+    }
+}
+
+@media (min-width: 1700px) {
+    .preview-logo {
+        width: 115px;
+    }
+}
