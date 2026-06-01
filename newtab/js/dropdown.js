@@ -4,7 +4,6 @@ var search_input = document.getElementById('input')
 select_dropdown_menu.addEventListener('change', change_search_engine);
 
 
-
 var search_engines = JSON.parse(localStorage.getItem('search_engines'));
 if (search_engines != null) {
     console.log(search_engines);
