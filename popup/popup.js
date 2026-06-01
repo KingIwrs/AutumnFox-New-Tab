@@ -3,17 +3,17 @@ const btn_settings = document.getElementById('btn-settings');
 const btn_add_entry = document.getElementById('btn-add_entry');
 
 wrapper_search_engines.addEventListener('click', press_a_button);
-wrapper_search_engines.addEventListener('keypress', focusout_index_editor);
+wrapper_search_engines.addEventListener('keydown', focusout_index_editor);
 wrapper_search_engines.addEventListener('focusout', prep_change_index);
 btn_settings.addEventListener('click', open_settings);
 btn_add_entry.addEventListener('click', add_entry);
 
 
 var saved_bg_color = localStorage.getItem('bg_color');
-if (saved_bg_color.length > 7) {
-    document.body.style.background = "#0f131f";
-} else if (saved_bg_color != null) {
+if (CSS.supports('color', saved_bg_color) && saved_bg_color != 'transparent' && saved_bg_color != 'unset' && saved_bg_color != 'initial' && saved_bg_color != 'inherit') {
     document.body.style.background = saved_bg_color;
+} else {
+    document.body.style.background = "#0f131f";
 }
 
 
@@ -24,7 +24,7 @@ function press_a_button(event) {
     }
     if (event.target.className == 'edit_button') {
         edit_id = event.target.parentElement.parentElement.id;
-        
+
         url = '/entry/entry_editor.html?edit_entry=' + encodeURIComponent(edit_id);
         window.open(url);
     }
@@ -47,7 +47,7 @@ if (search_engines != null) {
 
 function display_SE(array) {
     wrapper_search_engines.innerHTML = '';
-    for (i = 0; i < array.length; i ++) {
+    for (i = 0; i < array.length; i++) {
         append_divs(i);
     }
 }
@@ -56,66 +56,66 @@ function display_SE(array) {
 function append_divs(index) {
     // make div
     var SE_div = document.createElement('div');
-        SE_div.setAttribute('id', search_engines[index].id);
-        SE_div.setAttribute('class', 'SE_div');
-        SE_div.style.borderColor = search_engines[index].color;
+    SE_div.setAttribute('id', search_engines[index].id);
+    SE_div.setAttribute('class', 'SE_div');
+    SE_div.style.borderColor = search_engines[index].color;
 
     // label div
     var label_div = document.createElement('div');
-        label_div.setAttribute('id', search_engines[index].id + '_label_div');
-        label_div.setAttribute('class', 'label_div');
+    label_div.setAttribute('id', search_engines[index].id + '_label_div');
+    label_div.setAttribute('class', 'label_div');
 
     // label start thingy. like Name: and Color: and Link:
     var name_label_start = document.createElement('label');
-        name_label_start.setAttribute('class', 'label_start');
-        name_label_start.innerHTML = 'Name: ';
+    name_label_start.setAttribute('class', 'label_start');
+    name_label_start.innerHTML = 'Name: ';
     var color_label_start = document.createElement('label');
-        color_label_start.setAttribute('class', 'label_start');
-        color_label_start.innerHTML = 'Color: ';
+    color_label_start.setAttribute('class', 'label_start');
+    color_label_start.innerHTML = 'Color: ';
     var link_label_start = document.createElement('label');
-        link_label_start.setAttribute('class', 'label_start');
-        link_label_start.innerHTML = 'Link: ';
+    link_label_start.setAttribute('class', 'label_start');
+    link_label_start.innerHTML = 'Link: ';
 
     // make name label
     var name_label = document.createElement('label');
-        name_label.setAttribute('id', search_engines[index].id + '_name');
-        name_label.setAttribute('class', search_engines[index].id + '_name');
-        name_label.innerHTML = search_engines[index].name;
+    name_label.setAttribute('id', search_engines[index].id + '_name');
+    name_label.setAttribute('class', search_engines[index].id + '_name');
+    name_label.innerHTML = search_engines[index].name;
 
     // make color label
     var color_label = document.createElement('label');
-        color_label.setAttribute('id', search_engines[index].id + '_color');
-        color_label.setAttribute('class', search_engines[index].id + '_color');
-        color_label.innerHTML = search_engines[index].color;
-        color_label.style.color = search_engines[index].color;
+    color_label.setAttribute('id', search_engines[index].id + '_color');
+    color_label.setAttribute('class', search_engines[index].id + '_color');
+    color_label.innerHTML = search_engines[index].color;
+    color_label.style.color = search_engines[index].color;
 
     // make link label
     var link_label = document.createElement('label');
-        link_label.setAttribute('id', search_engines[index].id + '_link');
-        link_label.setAttribute('class', search_engines[index].id + '_link');
-        link_label.innerHTML = search_engines[index].link;
+    link_label.setAttribute('id', search_engines[index].id + '_link');
+    link_label.setAttribute('class', search_engines[index].id + '_link');
+    link_label.innerHTML = search_engines[index].link;
 
     // index editor
     var index_editor = document.createElement('input');
-        index_editor.setAttribute('id', search_engines[index].id + '_index_editor');
-        index_editor.setAttribute('class', 'index_editor');
-        index_editor.setAttribute('type', 'number');
-        index_editor.setAttribute('value', index);
+    index_editor.setAttribute('id', search_engines[index].id + '_index_editor');
+    index_editor.setAttribute('class', 'index_editor');
+    index_editor.setAttribute('type', 'number');
+    index_editor.setAttribute('value', index);
 
     // make edit and delete button div
     var edit_div = document.createElement('div');
-        edit_div.setAttribute('id', search_engines[index].id + '_edit_div');
-        edit_div.setAttribute('class', 'edit_div');
-    
+    edit_div.setAttribute('id', search_engines[index].id + '_edit_div');
+    edit_div.setAttribute('class', 'edit_div');
+
     // make buttons
     var delete_button = document.createElement('button');
-        delete_button.setAttribute('id', search_engines[index].id + '_delete_button');
-        delete_button.setAttribute('class', 'delete_button');
-        delete_button.innerHTML = "delete";
+    delete_button.setAttribute('id', search_engines[index].id + '_delete_button');
+    delete_button.setAttribute('class', 'delete_button');
+    delete_button.innerHTML = "delete";
     var edit_button = document.createElement('button');
-        edit_button.setAttribute('id', search_engines[index].id + '_edit_button');
-        edit_button.setAttribute('class', 'edit_button');
-        edit_button.innerHTML = "edit";
+    edit_button.setAttribute('id', search_engines[index].id + '_edit_button');
+    edit_button.setAttribute('class', 'edit_button');
+    edit_button.innerHTML = "edit";
 
     // APPENDING TIME
     label_div.appendChild(name_label_start);
