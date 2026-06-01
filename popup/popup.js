@@ -3,7 +3,13 @@ const btn_settings = document.getElementById('btn-settings');
 const btn_add_entry = document.getElementById('btn-add_entry');
 
 wrapper_search_engines.addEventListener('click', press_a_button);
-wrapper_search_engines.addEventListener('keydown', focusout_index_editor);
+
+wrapper_search_engines.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        event.target.blur();
+    }
+});
+
 wrapper_search_engines.addEventListener('focusout', prep_change_index);
 btn_settings.addEventListener('click', open_settings);
 btn_add_entry.addEventListener('click', add_entry);
@@ -136,14 +142,6 @@ function append_divs(index) {
 }
 
 
-function focusout_index_editor(event) {
-    if (event.keyCode != 13 && event.keyCode != null) { // 13 is enter key
-        return;
-    }
-    event.target.blur();
-}
-
-
 function prep_change_index(event) {
     const index_editor = event.target
     const grandpa_div = index_editor.parentElement.parentElement
@@ -159,8 +157,6 @@ function prep_change_index(event) {
     }
 
 }
-
-
 function change_index(old_array, old_index, new_index) {
     new_array = [];
 
