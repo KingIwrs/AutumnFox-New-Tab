@@ -29,7 +29,7 @@ function set_SE() {
                 id: "DuckDuckGo_0",
                 name: "DuckDuckGo",
                 color: "#de5833",
-                link: "https://duckduckgo.com/?t=h_&q=%s"
+                link: "https://duckduckgo.com/?q=%s"
             },
             {
                 id: "Google_0",
