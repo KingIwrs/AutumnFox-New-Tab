@@ -48,4 +48,5 @@ function set_SE() {
 
 set_logo();
 set_name();
+set_bg_color();
 set_SE();
