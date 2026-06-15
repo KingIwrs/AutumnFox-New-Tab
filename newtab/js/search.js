@@ -9,7 +9,7 @@ search_input.addEventListener("keydown", (event) => {
     }
 });
 
-clear_search.addEventListener("click", (event) => {
+clear_search.addEventListener("click", (_) => {
     search_input.value = '';
 });
 
