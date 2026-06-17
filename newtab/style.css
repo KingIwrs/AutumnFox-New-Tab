@@ -27,7 +27,7 @@
 }
 .input:focus {
     outline: none;
-    border-color: var(--focus_color) !important;
+    border-color: var(--focus_color);
     transition: all 0.3s ease;
 }
 /* INPUT */
