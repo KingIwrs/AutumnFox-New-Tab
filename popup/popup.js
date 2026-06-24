@@ -52,7 +52,7 @@ if (search_engines != null) {
 
 
 function display_SE(array) {
-    wrapper_search_engines.innerHTML = '';
+    wrapper_search_engines.replaceChildren();
     for (i = 0; i < array.length; i++) {
         append_divs(i);
     }
@@ -74,32 +74,32 @@ function append_divs(index) {
     // label start thingy. like Name: and Color: and Link:
     var name_label_start = document.createElement('label');
     name_label_start.setAttribute('class', 'label_start');
-    name_label_start.innerHTML = 'Name: ';
+    name_label_start.textContent = 'Name: ';
     var color_label_start = document.createElement('label');
     color_label_start.setAttribute('class', 'label_start');
-    color_label_start.innerHTML = 'Color: ';
+    color_label_start.textContent = 'Color: ';
     var link_label_start = document.createElement('label');
     link_label_start.setAttribute('class', 'label_start');
-    link_label_start.innerHTML = 'Link: ';
+    link_label_start.textContent = 'Link: ';
 
     // make name label
     var name_label = document.createElement('label');
     name_label.setAttribute('id', search_engines[index].id + '_name');
     name_label.setAttribute('class', search_engines[index].id + '_name');
-    name_label.innerHTML = search_engines[index].name;
+    name_label.textContent = search_engines[index].name;
 
     // make color label
     var color_label = document.createElement('label');
     color_label.setAttribute('id', search_engines[index].id + '_color');
     color_label.setAttribute('class', search_engines[index].id + '_color');
-    color_label.innerHTML = search_engines[index].color;
+    color_label.textContent = search_engines[index].color;
     color_label.style.color = search_engines[index].color;
 
     // make link label
     var link_label = document.createElement('label');
     link_label.setAttribute('id', search_engines[index].id + '_link');
     link_label.setAttribute('class', search_engines[index].id + '_link');
-    link_label.innerHTML = search_engines[index].link;
+    link_label.textContent = search_engines[index].link;
 
     // index editor
     var index_editor = document.createElement('input');
@@ -117,11 +117,11 @@ function append_divs(index) {
     var delete_button = document.createElement('button');
     delete_button.setAttribute('id', search_engines[index].id + '_delete_button');
     delete_button.setAttribute('class', 'delete_button');
-    delete_button.innerHTML = "delete";
+    delete_button.textContent = "delete";
     var edit_button = document.createElement('button');
     edit_button.setAttribute('id', search_engines[index].id + '_edit_button');
     edit_button.setAttribute('class', 'edit_button');
-    edit_button.innerHTML = "edit";
+    edit_button.textContent = "edit";
 
     // APPENDING TIME
     label_div.appendChild(name_label_start);

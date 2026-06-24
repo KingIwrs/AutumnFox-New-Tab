@@ -12,7 +12,7 @@ if (search_engines != null) {
 
 
 function start_populate_dropdown(array) {
-    select_dropdown_menu.innerHTML = '';
+    select_dropdown_menu.replaceChildren();
     for (i = 0; i < array.length; i ++) {
         populate_dropdown(i);
     }
@@ -22,7 +22,7 @@ function start_populate_dropdown(array) {
 function populate_dropdown(index) {
     var se_option = document.createElement('option');
         se_option.setAttribute('value', search_engines[index].id);
-        se_option.innerHTML = search_engines[index].name;
+        se_option.textContent = search_engines[index].name;
     
     select_dropdown_menu.appendChild(se_option);
     if (index == 0) {

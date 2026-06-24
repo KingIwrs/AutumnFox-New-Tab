@@ -5,7 +5,11 @@ var color_text = document.getElementById('color_text');
 
 
 btn_save.addEventListener('click', save_changes);
-edit_name.addEventListener('keypress', pressed_enter);
+edit_name.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        save_changes();
+    }
+});
 
 
 const logo_display = document.getElementById('logo_display');
@@ -24,14 +28,6 @@ img_inp.addEventListener('change', event => {
         reader.readAsDataURL(logo);
     }
 });
-
-function pressed_enter() {
-    if (event.keyCode != 13 && event.keyCode != null) { // 13 is enter key
-        return;
-    }
-
-    save_changes();
-}
 
 
 function save_changes() {

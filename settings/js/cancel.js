@@ -4,11 +4,11 @@ cancel_btn.addEventListener('click', cancel);
 
 function cancel() {
     preview_logo.src = localStorage.getItem('logo');
-    preview_name.innerHTML = localStorage.getItem('name');
-    preview_bg_color.innerHTML = localStorage.getItem('bg_color');
+    preview_name.textContent = localStorage.getItem('name');
+    preview_bg_color.textContent = localStorage.getItem('bg_color');
     var search_engines = JSON.parse(localStorage.getItem('search_engines'));
 
-    wrapper_search_engines.innerHTML = '';
+    wrapper_search_engines.replaceChildren();
     for (i = 0; i < search_engines.length; i ++) {
         append_default_divs(i);
     }
