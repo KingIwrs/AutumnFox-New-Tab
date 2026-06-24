@@ -9,7 +9,7 @@ if (saved_logo != null) {
 
 var saved_name = localStorage.getItem('name');
 if (saved_name != null) {
-    name_thing.innerHTML = saved_name;
+    name_thing.textContent = saved_name;
 }
 
 

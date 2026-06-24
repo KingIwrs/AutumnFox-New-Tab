@@ -45,12 +45,12 @@ var entry_id = url_parameters.get('edit_entry');
 search_engines = JSON.parse(localStorage.getItem('search_engines'));
 id_index = search_engines.findIndex(a => a.id == entry_id)
 if (add_entry == 'true') {
-    button_submit_entry.innerHTML = 'create';
-    title.innerHTML = 'Add Entry';
+    button_submit_entry.textContent = 'create';
+    title.textContent = 'Add Entry';
 }
 else {
-    button_submit_entry.innerHTML = 'save';
-    title.innerHTML = 'Edit Entry';
+    button_submit_entry.textContent = 'save';
+    title.textContent = 'Edit Entry';
     if (id_index == -1) {
         not_an_entry();
     }
@@ -68,6 +68,7 @@ function set_values(index) {
 
 
 function not_an_entry() { // change page to one of those "404 Page Not Found." pages if 'add_entry' != true and 'edit_entry' is not a valid id
+    // Replace this to to use appendChild type thing.
     wrapper_aligner.innerHTML = '\
     <div class="wrapper-logo">\
         <img src="/assets/AutumnFox.png" alt="Fox in the night of autumn" class="logo">\
