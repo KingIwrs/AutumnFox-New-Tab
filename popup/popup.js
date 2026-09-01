@@ -32,16 +32,19 @@ function press_a_button(event) {
         edit_id = event.target.parentElement.parentElement.id;
 
         url = '/entry/entry_editor.html?edit_entry=' + encodeURIComponent(edit_id);
-        window.open(url);
+	browser.tabs.create({ url: url });
+    window.close();
     }
 }
 
 function open_settings() {
-    window.open('/settings/settings.html');
+    browser.tabs.create({ url: '/settings/settings.html' });
+    window.close();
 }
 
 function add_entry() {
-    window.open('/entry/entry_editor.html?add_entry=true');
+	browser.tabs.create({ url: '/entry/entry_editor.html?add_entry=true' });
+    window.close();
 }
 
 
