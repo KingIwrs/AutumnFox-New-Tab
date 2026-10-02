@@ -23,7 +23,7 @@ function populate_dropdown(index) {
     var se_option = document.createElement('option');
         se_option.setAttribute('value', search_engines[index].id);
         se_option.textContent = search_engines[index].name;
-    
+
     select_dropdown_menu.appendChild(se_option);
     if (index == 0) {
         select_dropdown_menu.style.setProperty('--border_color', search_engines[index].color);
@@ -35,7 +35,7 @@ function populate_dropdown(index) {
 
 function change_search_engine() {
     index = search_engines.findIndex(a => a.id == select_dropdown_menu.value);
-    
+
     select_dropdown_menu.style.setProperty('--border_color', search_engines[index].color);
     search_input.style.setProperty('--focus_color', search_engines[index].color);
     search_input.placeholder = "Search with " + search_engines[index].name;
