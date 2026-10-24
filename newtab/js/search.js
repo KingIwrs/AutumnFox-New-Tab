@@ -28,6 +28,8 @@ function get_query_link() {
     return query_link;
 }
 function is_url(query) {
+    // // This makes the forward slash at end of url optional
+    // const regex = /^\S+\.[A-Za-z0-9-]{1,}(\/.*)?$/;
     const regex = /^\S+\.[A-Za-z0-9-]{1,}\/.*$/;
     return regex.test(query);
 }
